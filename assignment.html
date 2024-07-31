@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Check</title>  
+    <style>
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        button{
+            width: 400px;
+            height: 50px;
+            color:black;
+            background-color: antiquewhite;
+            margin-left: 600px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Welcome</h1>
+        <button onclick="checkLocation()">CLICK TO CHECK LOCATION</button>
+    </div>
+    <script>
+        function checkLocation() {
+            const location = prompt("Please enter your location:");
+            
+            if (location && (location.toLowerCase() === "punjab" || location.toLowerCase() === "haryana" || location.toLowerCase() === "chandigarh")) {
+                const username = prompt("Please enter your username:");
+                const password = prompt("Please enter your password:");
+                
+                if (username == "fee" && password == "2024") {
+                    window.location.href = "https://www.google.com/maps/place/" + location;
+                } else {
+                    alert("Wrong credentials.");
+                }
+            } else {
+                alert("Access denied.");
+            }
+        }
+    </script>
+</body>
+</html>
